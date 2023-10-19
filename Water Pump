@@ -1,0 +1,19 @@
+// Define the pin to which the relay module is connected
+const int relayPin = 2; // Replace with the actual pin number
+
+void setup() {
+  // Set the relay pin as an OUTPUT
+  pinMode(relayPin, OUTPUT);
+  // Initialize the relay in the OFF state
+  digitalWrite(relayPin, LOW);
+}
+
+void loop() {
+  // Turn the relay on (activates the water pump) for 5 seconds
+  digitalWrite(relayPin, HIGH);
+  delay(5000);
+
+  // Turn the relay off (deactivates the water pump) for 5 seconds
+  digitalWrite(relayPin, LOW);
+  delay(5000);
+}
